@@ -1,24 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Replenish Day Risk Assessment</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Basic body styling, Inter font is loaded via link tag */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f3f4f6; /* Light gray background */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Replenish Day Risk Assessment</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+    }
+  </style>
 </head>
 <body class="min-h-screen flex flex-col">
-    <div id="root" class="flex-grow flex flex-col"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white shadow-lg py-4 px-6 md:px-10">
+    <div class="container mx-auto text-center">
+      <h1 class="text-4xl font-bold">Replenish Day Risk Assessment</h1>
+    </div>
+  </header>
+
+  <main class="flex-grow container mx-auto p-4 md:p-8 flex items-center justify-center">
+    <div class="bg-white p-6 md:p-10 rounded-xl shadow-2xl w-full max-w-3xl">
+      <section id="introduction" class="mb-8 text-center">
+        <p class="text-gray-600 leading-relaxed text-lg">
+          This quiz will help you decide how much freedom you can allow yourself on your Replenish Day.
+          Answer each question honestly to find out whether you should take a more flexible or more structured approach during your break from OMAD.
+        </p>
+      </section>
+
+      <section id="quiz-section" class="mb-8">
+        <form id="quiz-form" class="space-y-6">
+
+          <!-- Question 1 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">1. Do you often eat past the point of fullness when enjoying your favorite foods?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q1" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q1" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">2. If you plan a meal or treat in advance, do you usually stick to the plan?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q2" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q2" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">3. When you're around social food situations (e.g. parties or gatherings), do you tend to lose control or binge eat?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q3" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q3" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">4. Have you ever told yourself “this is just one treat” but ended up having multiple unplanned meals or snacks?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q4" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q4" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 5 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">5. After a Replenish Day or a cheat meal in the past, have you struggled to get back on track the next day?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q5" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q5" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 6 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">6. Do you feel confident that you could enjoy a Replenish Day and stop eating when comfortably full?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q6" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q6" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 7 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">7. When food is available or in front of you, do you feel compelled to finish it even if you're no longer hungry?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q7" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q7" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Question 8 -->
+          <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+            <p class="text-lg font-medium text-gray-800 mb-3">8. Do you tend to eat based on emotion (boredom, stress, celebration) more than hunger?</p>
+            <div class="flex items-center space-x-6">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q8" value="yes" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">Yes</span>
+              </label>
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="radio" name="q8" value="no" class="form-radio h-5 w-5 text-blue-600">
+                <span class="ml-2 text-gray-700">No</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="flex justify-center space-x-4 mt-8">
+            <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+              Get My Recommendation
+            </button>
+            <button type="button" id="reset-button" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+              Reset Quiz
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section id="results-section" class="mt-10 p-6 bg-blue-50 rounded-xl shadow-inner hidden">
+        <h3 class="text-2xl font-bold text-blue-800 mb-4 text-center">Your Recommendation:</h3>
+        <div id="recommendation-text" class="text-lg text-gray-700 leading-relaxed text-center"></div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('quiz-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let yesCount = 0;
+      for (let i = 1; i <= 8; i++) {
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        if (selected && selected.value === "yes") yesCount++;
+      }
+
+      let output = "";
+      if (yesCount <= 3) {
+        output = `
+          <p class="font-semibold text-green-600 mb-2">Low Risk (Flexible)</p>
+          <p>You have a healthy relationship with food and can enjoy your Replenish Day with freedom. Plan your meals, but allow flexibility and enjoyment.</p>`;
+      } else if (yesCount <= 6) {
+        output = `
+          <p class="font-semibold text-yellow-600 mb-2">Moderate Risk (Guided)</p>
+          <p>You may benefit from a structured Replenish Day. Stick to your plan, be mindful of portions, and avoid all-day grazing.</p>`;
+      } else {
+        output = `
+          <p class="font-semibold text-red-600 mb-2">High Risk (Strict)</p>
+          <p>Stick to one well-planned meal on your Replenish Day — but make it feel special. Choose something delicious and rewarding, a true treat you can look forward to. Avoid turning the day into multiple meals or snacking stretches. One satisfying meal can still feel like a celebration without setting you back.</p>`;
+      }
+
+      document.getElementById("recommendation-text").innerHTML = output;
+      document.getElementById("results-section").classList.remove("hidden");
+      document.getElementById("results-section").scrollIntoView({ behavior: "smooth" });
+    });
+
+    document.getElementById("reset-button").addEventListener("click", function () {
+      document.getElementById("quiz-form").reset();
+      document.getElementById("results-section").classList.add("hidden");
+      document.getElementById("recommendation-text").innerHTML = "";
+    });
+  </script>
 </body>
 </html>
-
-
